@@ -15,6 +15,17 @@ Clone this repository, `cd` to it and:
 docker build --no-cache --rm=true -t archivesspace/build:latest . 
 ```
 
+**Update images**
+
+To update images from the Docker registry:
+
+```
+docker pull mysql
+docker pull markcooper/archivesspace-build
+```
+
+The `archivesspace-build` image is frequently updated as new commits are made to `master`.
+
 **Running**
 
 Use `archivesspace/build:latest` in place of `markcooper/archivesspace-build` for local builds.
