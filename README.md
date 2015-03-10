@@ -1,6 +1,12 @@
 Docker ArchivesSpace builds
 ---------------------------
 
+**Quickstart**
+
+```
+./run.sh
+```
+
 **Automated builds**
 
 - docker hub integration (build on push)
@@ -12,7 +18,7 @@ Docker ArchivesSpace builds
 Clone this repository, `cd` to it and:
 
 ```
-docker build --no-cache --rm=true -t archivesspace/build:latest . 
+docker build --no-cache --rm=true -t archivesspace/build:latest .
 ```
 
 **Update images**
@@ -32,7 +38,7 @@ Use `archivesspace/build:latest` in place of `markcooper/archivesspace-build` fo
 
 ```
 # background mode
-docker run --name build -d \
+docker run --name archivesspace -d \
   -p 8080:8080 \
   -p 8081:8081 \
   -p 8089:8089 \
@@ -40,7 +46,7 @@ docker run --name build -d \
   markcooper/archivesspace-build
 
 # foreground mode
-docker run --name build -i -t \
+docker run --name archivesspace -i -t \
   -p 8080:8080 \
   -p 8081:8081 \
   -p 8089:8089 \
@@ -48,7 +54,7 @@ docker run --name build -i -t \
   markcooper/archivesspace-build
 
 # foreground mode and access container
-docker run --name build -i -t \
+docker run --name archivesspace -i -t \
   -p 8080:8080 \
   -p 8081:8081 \
   -p 8089:8089 \
@@ -70,7 +76,7 @@ docker run -d \
   mysql
 
 # foreground mode
-docker run --name build -i -t \
+docker run --name archivesspace -i -t \
   -p 8080:8080 \
   -p 8081:8081 \
   -p 8089:8089 \
