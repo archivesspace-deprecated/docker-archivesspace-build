@@ -18,7 +18,8 @@ docker run -d \
   mysql
 
 # give mysql time to start
-sleep 15
+echo "Waiting for MySQL to initialize"
+sleep 30
 
 echo "Starting ArchivesSpace build instance in background"
 docker run --name build -d \
